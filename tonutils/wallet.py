@@ -23,6 +23,6 @@ class Wallet:
     def __exit__(self, *_):
         free_wallet(self.__seed)
     
-    @classmethod
+    @staticmethod
     def new():
         return Wallet(create_wallet())
