@@ -1,8 +1,7 @@
 from ctypes import *
-from os.path import abspath, dirname
 from os.path import join as path_join
 
-__lib = CDLL(path_join(dirname(dirname(abspath(__file__))), "lib", "libton.so"))
+__lib = CDLL(path_join("lib", "libton.so"))
 
 __init_api = __lib.InitAPI
 __init_api.argtypes = [c_char_p]
