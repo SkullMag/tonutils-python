@@ -1,4 +1,4 @@
-from tonutils.ton import free_wallet, get_wallet_address, get_wallet_balance, transfer, use_wallet
+from tonutils.ton import free_wallet, get_wallet_address, get_wallet_balance, transfer, use_wallet, create_wallet
 
 
 class Wallet:
@@ -22,3 +22,7 @@ class Wallet:
 
     def __exit__(self, *_):
         free_wallet(self.__seed)
+    
+    @classmethod
+    def new():
+        return Wallet(create_wallet())
