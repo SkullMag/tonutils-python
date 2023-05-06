@@ -4,6 +4,10 @@ from tonutils.ton import free_wallet, get_wallet_address, get_wallet_balance, tr
 class Wallet:
     def __init__(self, seed: str):
         self.__seed = seed
+    
+    @property
+    def seed(self):
+        return self.__seed
 
     @property
     def address(self):
